@@ -29,7 +29,7 @@ class Opinion:
         self.useful = useful 
         self.useless = useless 
 
-    def extract_opinion(self):
+    def extract_opinion(self, opinion):
         for key, args in self.selectors.items():
             setattr(self, key, extract_element(opinion, *args))
         self.opinion_id = opinion["data-entry-id"]
@@ -52,6 +52,6 @@ class Opinion:
         return f"Opinion(opinion_id={self.opinion_id}" + ", ".join(f"{key}={str(getattr(self,key))}" for key in self.selectors.keys()) + ")"
 
     def to_dict(self):
-        return {"opinion_id": self.opinion_id} | {key: getattr(self,key) for key in self.selctors.keys()}
+        return {"opinion_id": self.opinion_id} | {key: getattr(self,key) for key in self.selectors.keys()}
 
     
