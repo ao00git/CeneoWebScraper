@@ -19,10 +19,10 @@
                         <a class="nav-link active"aria-current="page" href="{{  url_for('index')  }}">Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"aria-current="page" href="{{  url_for('extract', product_id=96796516) }}">Ekstrakcja opinii</a>
+                        <a class="nav-link active"aria-current="page" href="{{  url_for('extract') }}">Ekstrakcja opinii</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"aria-current="page" href="{{  url_for('products')  }}">Lista opinii</a>
+                        <a class="nav-link active"aria-current="page" href="{{  url_for('products')  }}">Lista produktów</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active"aria-current="page" href="{{  url_for('about')  }}">O autorze</a>
@@ -41,6 +41,10 @@
                 {% endblock middle%}
             </div>
         </div>
+        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js?fbclid=IwAR1FZ2Bbx-edzwOVm3p5wm86Tt0Lim0dZ76qQdH8gnpy6wJkTZ9wWqqPt7A">
+        {% block scripts %}
+
+        {% endblock scripts %}
     </div>
 
 
